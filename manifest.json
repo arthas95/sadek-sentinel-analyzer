@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Mon Scanner de Hash",
+  "version": "1.0",
+  "description": "Analyse le hash des téléchargements via une API locale.",
+  "permissions": [
+    "downloads",
+    "notifications",
+    "http://localhost/*",
+    "https://localhost/*",
+    "<all_urls>" 
+],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "48": "icons/icon-48.png"
+  }
+}
