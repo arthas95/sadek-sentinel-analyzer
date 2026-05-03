@@ -1,20 +1,38 @@
 {
   "manifest_version": 2,
-  "name": "Mon Scanner de Hash",
+  "name": "HashDetectMalware",
   "version": "1.0",
-  "description": "Analyse le hash des téléchargements via une API locale.",
+  "description": "Analyse les hashes SHA-256 des téléchargements via une API de réputation malware.",
+
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+
   "permissions": [
     "downloads",
     "notifications",
-    "http://localhost/*",
-    "https://localhost/*",
-    "<all_urls>" 
-],
+    "storage",
+    "https://sentinel.sadek-it.fr/*",
+    "<all_urls>"
+  ],
+
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "icons": {
-    "48": "icons/icon-48.png"
+
+  "browser_action": {
+    "default_icon": "icons/icon-48.png",
+    "default_title": "HashDetectMalware",
+    "default_popup": "popup/popup.html"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hashdetectmalware@sadek-adel",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
   }
 }

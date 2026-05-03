@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>HashDetectMalware</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: Arial, sans-serif;
+      padding: 14px;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: #38bdf8;
+    }
+
+    .status {
+      padding: 10px;
+      border-radius: 8px;
+      background: #1e293b;
+      margin-bottom: 10px;
+    }
+
+    .label {
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .value {
+      font-size: 13px;
+      word-break: break-all;
+      margin-bottom: 8px;
+    }
+
+    .clean {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .danger {
+      color: #ef4444;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>HashDetectMalware</h1>
+
+  <div class="status">
+    <div class="label">Statut</div>
+    <div class="value">Surveillance active des téléchargements</div>
+  </div>
+
+  <div class="status">
+    <div class="label">Dernière analyse</div>
+    <div id="last-file" class="value">Aucun fichier analysé</div>
+
+    <div class="label">Verdict</div>
+    <div id="verdict" class="value">En attente</div>
+
+    <div class="label">Hash SHA-256</div>
+    <div id="hash" class="value">-</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
